@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Detail Items</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #5c3f32;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .card {
+            background-color: white;
+            color: #5c3f32;
+            width: 100%;
+            max-width: 900px; /* Limit card width */
+        }
+
+        .card-body {
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .img-container {
+            margin-right: 20px;
+        }
+
+        .img-container img {
+            width: 300px;
+            border-radius: 10px;
+        }
+
+        .text-container {
+            flex-grow: 1;
+        }
+
+        .text-container h3 a {
+            color: #5c3f32;
+        }
+
+        .text-container span {
+            color: #5c3f32;
+        }
+
+        .buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card-container">
+            <div class="card">
+                <div class="card-body">
+                    <!-- Image on the left -->
+                    <div class="img-container">
+                        <img src="{{ item.image.url }}" alt="{{ item.productName }}" class="img-fluid">
+                    </div>
+                    <!-- Content on the right -->
+                    <div class="text-container">
+                        <span class="cat-name text-color font-extra text-sm text-uppercase letter-spacing-1">{{ item.productName }}</span>
+                        <h3 class="post-title mt-2">
+                            <p href="blog-single.html">{{ item.Discription }}</p>
+                        </h3>
+                        <span class="text-muted letter-spacing text-uppercase font-sm">$ {{ item.price }}</span>
+
+                        <!-- Delete Confirmation Form -->
+                        <div class="buttons">
+                            <a href="{% url 'item-list-admin' %}" class="btn btn-secondary">Cancel</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- You can add more cards here -->
+        </div>
+    </div>
+
+    <!-- Bootstrap JS, Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

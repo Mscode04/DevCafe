@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Success Payment</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style>
+        /* Basic styling for the page */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .display-4 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .text-success {
+            color: #28a745;
+        }
+        .lead {
+            font-size: 1.25rem;
+            font-weight: 300;
+        }
+        .btn {
+            display: inline-block;
+            font-size: 1.25rem;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #007bff;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .mt-4 {
+            margin-top: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Success message -->
+    <div class="text-center">
+        <h1 class="display-4 text-success">Payment Successful!</h1>
+        <p class="lead">Thank you for your payment. Your transaction was successful.</p>
+        <!-- Button to return home -->
+        <a href="{% url 'item-view' %}" class="btn mt-4">Back to Home</a>
+    </div>
+</body>
+</html>

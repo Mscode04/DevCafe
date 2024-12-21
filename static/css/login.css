@@ -1,0 +1,29 @@
+body {
+    background-color: #5c3f32;
+    font-family: Arial, sans-serif;
+}
+.form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #a75f4a;
+    margin-bottom: 20px;
+}
+.form-container .form-label {
+    color: #5c3f32;
+}
+.form-container .btn-primary {
+    background-color: #a75f4a;
+    border: none;}
+
+
+.form-container .btn-primary:hover {
+    background-color: #5c3f32;}
+

@@ -1,0 +1,68 @@
+/* Global body background color */
+body {
+    background-color: #5c3f32;
+}
+
+/* Form container styling */
+.Item-form-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px !important;
+    margin: 50px auto;
+}
+
+/* Style the form fields */
+.Item-form input[type="text"],
+.Item-form input[type="number"],
+.Item-form textarea,
+.Item-form input[type="file"] {
+    width: 500px;  /* Set width to 80% for all input fields */
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Larger text area for description */
+.Item-form textarea {
+    height: 80px;
+}
+
+/* Submit button styling */
+.submit-btn {
+    background-color: #a75f4a;
+    color: white;
+    border: none;
+    padding: 8px 15px; /* Decreased padding for smaller button */
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px; /* Decreased font size */
+    ; /* Set to auto to fit text width */
+    margin: auto auto; /* Center the button horizontally */
+    display: block; /* Make it a block element for centering */
+}
+
+/* Submit button hover effect */
+.submit-btn:hover {
+    background-color: #5c3f32;
+}
+
+/* Styling for labels */
+.Item-form label {
+    color: #5c3f32;
+}
+
+/* Styling the form title */
+.Item-form h2 {
+    color: #a75f4a;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Add margin to form groups for better spacing */
+.form-group {
+    margin-bottom: 20px;
+}

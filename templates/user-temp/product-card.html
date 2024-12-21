@@ -1,0 +1,55 @@
+{% extends 'user-temp/user-dashbord.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container mt-4">
+    <div class="row">
+        {% for item in page %}
+        <div class="col-lg-4 col-md-6 mb-4">
+            <article class="post-grid">
+                <a class="post-thumb mb-3 d-block" href="blog-single.html">
+                    <img src="{{ item.image.url }}" alt="{{ item.productName }}" class="img-fluid w-100">
+                </a>
+                <span class="cat-name text-color font-extra text-sm text-uppercase letter-spacing-1">{{ item.productName }}</span>
+                <h3 class="post-title mt-2">
+                    <a href="blog-single.html">{{ item.Discription }}</a>
+                </h3>
+                <h4 class="text-muted letter-spacing text-uppercase font-sm">Qty : {{ item.quantity }}</h4>
+                <span class="text-muted letter-spacing text-uppercase font-sm">$ {{ item.price }}</span>
+                <button type="button" class="btn btn-primary item-card-button" style="margin-left: 100px;"><a href="{% url 'add-to-cart' pro_id=item.id %}"> Add Cart</a></button>
+
+
+            </article>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Pagination -->
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+        {% if page.has_previous %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ page.previous_page_number }}" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        {% endif %}
+
+        {% for num in page.paginator.page_range %}
+        <li class="page-item {% if page.number == num %}active{% endif %}">
+            <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+        </li>
+        {% endfor %}
+
+        {% if page.has_next %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ page.next_page_number }}" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+        {% endif %}
+    </ul>
+</nav>
+
+{% endblock %}
